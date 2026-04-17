@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp /tmp/bbt_files/BBT_Carousel_Slide_01.jpg \"c:\\\\Users\\\\User\\\\Documents\\\\BigBinary\\\\bbt_\\\\BBT_Carousel_Slide_01.jpg\")",
+      "Bash(cp /tmp/bbt_files/BBT_Carousel_Slide_02.jpg \"c:\\\\Users\\\\User\\\\Documents\\\\BigBinary\\\\bbt_\\\\BBT_Carousel_Slide_02.jpg\")",
+      "Bash(cp /tmp/bbt_files/BBT_Carousel_Slide_03.jpg \"c:\\\\Users\\\\User\\\\Documents\\\\BigBinary\\\\bbt_\\\\BBT_Carousel_Slide_03.jpg\")",
+      "Bash(cp /tmp/bbt_files/BBT_Carousel_Slide_04.jpg \"c:\\\\Users\\\\User\\\\Documents\\\\BigBinary\\\\bbt_\\\\BBT_Carousel_Slide_04.jpg\")",
+      "Bash(cp /tmp/bbt_files/BBT_Carousel_Slide_05.jpg \"c:\\\\Users\\\\User\\\\Documents\\\\BigBinary\\\\bbt_\\\\BBT_Carousel_Slide_05.jpg\")",
+      "WebSearch",
+      "WebFetch(domain:cwpakistan.com)",
+      "WebFetch(domain:www.thefridaytimes.com)",
+      "WebFetch(domain:techdestination.com)",
+      "WebFetch(domain:nsis.navttc.gov.pk)",
+      "WebFetch(domain:www.pasha.org.pk)",
+      "WebFetch(domain:navttc.gov.pk)",
+      "WebFetch(domain:tribune.com.pk)",
+      "WebFetch(domain:skillingpakistan.org)",
+      "WebFetch(domain:pakobserver.net)",
+      "WebFetch(domain:www.aihunar.org)",
+      "Bash(npm --version)",
+      "Bash(where chrome:*)",
+      "Bash(where \"Google Chrome\")",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Read(//c/Program Files \\(x86\\)/Google/Chrome/Application/**)"
+    ],
+    "additionalDirectories": [
+      "\\tmp\\bbt_files2"
+    ]
+  }
+}

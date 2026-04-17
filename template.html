@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAGE TITLE — Big Binary Tech | bbt.edu.pk</title>
+<meta name="description" content="PAGE DESCRIPTION">
+<link rel="canonical" href="https://bbt.edu.pk/PAGE-SLUG">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Barlow+Condensed:wght@600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- BBT Design System -->
+<link rel="stylesheet" href="bbt.css">
+
+<!-- Theme: apply before render to prevent flash -->
+<script>(function(){var t=localStorage.getItem('bbt-theme')||'dark';document.documentElement.setAttribute('data-theme',t)})()</script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAV — set style="color:var(--amber)" on the active link
+════════════════════════════════════════ -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="logo.png" alt="Big Binary Tech">
+    <!-- optional: <div class="nav-slug">bbt.edu.pk/page-slug</div> -->
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="curriculum.html">Curriculum</a>
+    <a href="about.html">Our Approach</a>
+    <a href="franchise.html">Franchise</a>
+    <a href="https://bigbinarytech.com" target="_blank">bigbinarytech.com ↗</a>
+    <a href="https://bigbinaryerp.com" target="_blank">bigbinaryerp.com ↗</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+  <a class="nav-cta" href="enroll.html">Apply — April 2026</a>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     PAGE HERO — inner pages
+════════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="eyebrow">Section · bbt.edu.pk/PAGE-SLUG</div>
+  <h1 class="page-title">PAGE<br><em>TITLE</em></h1>
+  <p class="page-lead">One or two lines of supporting copy that explain the page goal.</p>
+  <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px">
+    <a class="btn-primary" href="#section">Primary CTA</a>
+    <a class="btn-outline" href="enroll.html">Apply Now</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     MARQUEE (optional amber ticker band)
+════════════════════════════════════════ -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Item One</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Item Two</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Item Three</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Item One</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Item Two</span><span class="marquee-sep">·</span>
+    <span class="marquee-item">Item Three</span><span class="marquee-sep">·</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TRUST / STATS BAR (optional)
+════════════════════════════════════════ -->
+<div class="trust-bar reveal">
+  <div class="ti"><div class="ti-num">10<span>:1</span></div><div class="ti-label">Demand-to-supply gap for AI engineers</div></div>
+  <div class="tdiv"></div>
+  <div class="ti"><div class="ti-num">7</div><div class="ti-label">Course tracks on documented market gaps</div></div>
+  <div class="tdiv"></div>
+  <div class="ti"><div class="ti-num">4</div><div class="ti-label">Pipeline stages from enrolment to Expert</div></div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     EXAMPLE SECTION — two-col intro + grid
+════════════════════════════════════════ -->
+<section id="section">
+  <div class="two-col reveal">
+    <div>
+      <div class="eyebrow">Eyebrow Label</div>
+      <h2 class="section-title">SECTION<br><em>HEADING</em></h2>
+    </div>
+    <p class="section-body">Supporting body copy goes here. Keep it under 3 lines. Weight 300, muted colour.</p>
+  </div>
+
+  <!-- 3-column feature grid (last card auto-amber) -->
+  <div class="why-grid reveal">
+    <div class="wc">
+      <span class="wc-n">01 — Label</span>
+      <div class="wc-t">Card Title One</div>
+      <div class="wc-d">Description text, max 2–3 lines, weight 300.</div>
+    </div>
+    <div class="wc">
+      <span class="wc-n">02 — Label</span>
+      <div class="wc-t">Card Title Two</div>
+      <div class="wc-d">Description text, max 2–3 lines, weight 300.</div>
+    </div>
+    <div class="wc">
+      <!-- Last card is automatically amber — use as CTA -->
+      <span class="wc-n">— Apply Now</span>
+      <div class="wc-t">April 2026. 30 Seats.</div>
+      <div class="wc-d">Competitive selection. Applications close when seats fill.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CTA / APPLY SECTION — same on every page
+════════════════════════════════════════ -->
+<section class="cta-section" id="apply">
+  <div class="cta-box reveal">
+    <div>
+      <h2 class="cta-headline">START YOUR<br><em>TRACK</em><br>TODAY.</h2>
+      <p class="cta-sub">Don't just graduate. Get hired — or join us.</p>
+    </div>
+    <div>
+      <a class="btn-primary" href="enroll.html" style="display:inline-block;margin-bottom:20px">Start Your Application →</a>
+      <p class="cta-note">Or WhatsApp: 0326-0188811 · info@bbt.edu.pk · Lahore</p>
+      <div class="cta-meta">
+        <div class="cmi"><div class="cmi-l">Next cohort</div><div class="cmi-v">April 2026</div></div>
+        <div class="cmi"><div class="cmi-l">Seats / track</div><div class="cmi-v">30</div></div>
+        <div class="cmi"><div class="cmi-l">Tracks open</div><div class="cmi-v">7</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER — identical on every page
+════════════════════════════════════════ -->
+<footer>
+  <div class="fl">
+    <img src="logo.png" alt="Big Binary Tech">
+    <div class="fl-s">bbt.edu.pk · Lahore, Pakistan</div>
+  </div>
+  <div class="flinks">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="curriculum.html">Curriculum</a>
+    <a href="about.html">Our Approach</a>
+    <a href="franchise.html">Franchise</a>
+    <a href="https://bigbinarytech.com" target="_blank">bigbinarytech.com ↗</a>
+    <a href="https://bigbinaryerp.com" target="_blank">bigbinaryerp.com ↗</a>
+    <a href="enroll.html">Apply</a>
+  </div>
+  <div class="fcopy">© 2026 Big Binary Tech · 0326-0188811 · info@bbt.edu.pk</div>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     SCRIPTS — copy to every page
+════════════════════════════════════════ -->
+<script>
+function toggleTheme() {
+  var html = document.documentElement;
+  var next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('bbt-theme', next);
+  var btn = document.getElementById('theme-toggle');
+  if (btn) btn.textContent = next === 'light' ? '☀️' : '🌙';
+}
+window.addEventListener('DOMContentLoaded', function() {
+  var t = localStorage.getItem('bbt-theme') || 'dark';
+  var btn = document.getElementById('theme-toggle');
+  if (btn) btn.textContent = t === 'light' ? '☀️' : '🌙';
+  document.body.classList.add('js-ready');
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+});
+</script>
+
+</body>
+</html>

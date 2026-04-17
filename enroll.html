@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enrol — Apply for April 2026 Cohort | Big Binary Tech</title>
+<meta name="description" content="Apply for the April 2026 cohort at Big Binary Tech. Seven tracks. Thirty seats each. Competitive intake — enrol now at bbt.edu.pk.">
+<link rel="canonical" href="https://bbt.edu.pk/enroll">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Barlow+Condensed:wght@600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- BBT Design System -->
+<link rel="stylesheet" href="bbt.css">
+
+<!-- Theme: must be before </head> to prevent flash -->
+<script>(function(){var t=localStorage.getItem('bbt-theme')||'dark';document.documentElement.setAttribute('data-theme',t)})()</script>
+</head>
+<body>
+
+<div class="grid-bg">
+  <div class="binary-rain">01 10 00 11
+10 01 11 00
+00 11 01 10
+11 00 10 01
+01 10 00 11
+10 01 11 00
+00 11 01 10
+11 00 10 01
+01 10 00 11
+10 01 11 00
+00 11 01 10
+11 00 10 01</div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="logo.png" alt="Big Binary Tech">
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="curriculum.html">Curriculum</a>
+    <a href="about.html">Our Approach</a>
+    <a href="franchise.html">Franchise</a>
+    <a href="https://bigbinarytech.com" target="_blank">bigbinarytech.com ↗</a>
+    <a href="https://bigbinaryerp.com" target="_blank">bigbinaryerp.com ↗</a>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+  <a class="nav-cta" href="enroll.html">Apply — April 2026</a>
+</nav>
+
+<!-- HERO -->
+<div class="enroll-hero reveal">
+  <div class="eyebrow">Applications · April 2026 Cohort</div>
+  <h1>Start Your<br><em>Track.</em></h1>
+  <p>Seven tracks. Thirty seats each. Competitive intake — BBT only takes in what it can develop properly. Fill in the form below and our admissions team will be in touch.</p>
+</div>
+
+<!-- FORM -->
+<div class="enroll-form-wrap">
+  <form class="enroll-form reveal" id="enroll-form" novalidate>
+
+    <div class="ef-row">
+      <div class="ef-field">
+        <label for="ef-name">Full Name *</label>
+        <input type="text" id="ef-name" name="name" placeholder="e.g. Ali Hassan" required>
+      </div>
+      <div class="ef-field">
+        <label for="ef-email">Email Address *</label>
+        <input type="email" id="ef-email" name="email" placeholder="you@example.com" required>
+      </div>
+    </div>
+
+    <div class="ef-row">
+      <div class="ef-field">
+        <label for="ef-phone">WhatsApp / Phone *</label>
+        <input type="tel" id="ef-phone" name="phone" placeholder="03XX-XXXXXXX" required>
+      </div>
+      <div class="ef-field">
+        <label for="ef-city">City *</label>
+        <input type="text" id="ef-city" name="city" placeholder="Lahore, Karachi, etc." required>
+      </div>
+    </div>
+
+    <div class="ef-row">
+      <div class="ef-field">
+        <label for="ef-track">Track of Interest *</label>
+        <select id="ef-track" name="track" required>
+          <option value="" disabled selected>Select a track…</option>
+          <option value="gen-ai">Track 01 — Generative AI + Agentic AI</option>
+          <option value="cloud-mlops">Track 02 — Cloud + MLOps</option>
+          <option value="odoo">Track 03 — Odoo ERP Development</option>
+          <option value="fullstack">Track 04 — AI-Integrated Full Stack</option>
+          <option value="cyber">Track 05 — Cybersecurity</option>
+          <option value="design">Track 06 — UI/UX + Brand Design</option>
+          <option value="marketing">Track 07 — AI-Powered Marketing + Sales</option>
+        </select>
+      </div>
+      <div class="ef-field">
+        <label for="ef-background">Your Background *</label>
+        <select id="ef-background" name="background" required>
+          <option value="" disabled selected>Select…</option>
+          <option value="student">Currently a student</option>
+          <option value="graduate">Fresh graduate</option>
+          <option value="professional">Working professional</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="ef-field span2">
+      <label for="ef-message">Anything you'd like us to know? <span style="color:var(--muted)">(optional)</span></label>
+      <textarea id="ef-message" name="message" placeholder="Your goals, questions, or relevant experience…"></textarea>
+    </div>
+
+    <div>
+      <button type="submit" class="enroll-submit">Submit Application</button>
+      <p class="enroll-note">Or reach us directly: <strong>0326-0188811</strong> · info@bbt.edu.pk</p>
+    </div>
+
+  </form>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="enroll-modal-overlay" id="enroll-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="enroll-modal">
+    <div class="enroll-modal-icon">✅</div>
+    <h2 id="modal-title">Enrolment Request<br><em>Received.</em></h2>
+    <p>You have done your part — our admissions team will contact you soon to walk you through the next steps.</p>
+    <button class="enroll-modal-ok" id="modal-ok">OK</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fl">
+    <img src="logo.png" alt="Big Binary Tech">
+    <div class="fl-s">bbt.edu.pk · Lahore, Pakistan</div>
+  </div>
+  <div class="flinks">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="curriculum.html">Curriculum</a>
+    <a href="about.html">Our Approach</a>
+    <a href="franchise.html">Franchise</a>
+    <a href="https://bigbinarytech.com" target="_blank">bigbinarytech.com ↗</a>
+    <a href="https://bigbinaryerp.com" target="_blank">bigbinaryerp.com ↗</a>
+    <a href="enroll.html">Apply</a>
+  </div>
+  <div class="fcopy">© 2026 Big Binary Tech · 0326-0188811 · info@bbt.edu.pk</div>
+</footer>
+
+<script>
+function toggleTheme() {
+  var html = document.documentElement;
+  var next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('bbt-theme', next);
+  var btn = document.getElementById('theme-toggle');
+  if (btn) btn.textContent = next === 'light' ? '☀️' : '🌙';
+}
+window.addEventListener('DOMContentLoaded', function() {
+  var t = localStorage.getItem('bbt-theme') || 'dark';
+  var btn = document.getElementById('theme-toggle');
+  if (btn) btn.textContent = t === 'light' ? '☀️' : '🌙';
+  document.body.classList.add('js-ready');
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+
+  // Form submit
+  document.getElementById('enroll-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = e.target;
+    // Basic validation
+    var required = form.querySelectorAll('[required]');
+    var valid = true;
+    required.forEach(function(field) {
+      if (!field.value.trim()) {
+        field.style.borderColor = '#e05c5c';
+        valid = false;
+      } else {
+        field.style.borderColor = '';
+      }
+    });
+    if (!valid) return;
+    // Show modal
+    document.getElementById('enroll-modal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Modal OK → home
+  document.getElementById('modal-ok').addEventListener('click', function() {
+    window.location.href = 'index.html';
+  });
+
+  // Close modal on overlay click
+  document.getElementById('enroll-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      window.location.href = 'index.html';
+    }
+  });
+});
+</script>
+
+</body>
+</html>

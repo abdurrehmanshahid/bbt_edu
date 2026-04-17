@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip -o \"c:\\\\Users\\\\User\\\\Documents\\\\BigBinary\\\\bbt_\\\\files.zip\" -d /tmp/bbt_files)",
+      "Read(//tmp/**)",
+      "mcp__claude_ai_Canva__generate-design",
+      "Bash(where python:*)",
+      "Bash(where py:*)",
+      "Bash(py --version)",
+      "Bash(node -e ':*)",
+      "Bash(python -c ':*)",
+      "Bash(awk -F: '{print $1, substr\\($2,1,80\\)}')",
+      "Bash(python3 -c ' *)",
+      "Bash(node -e ' *)",
+      "Bash(ls -lh \"/c/Users/User/Documents/BigBinary/bbt_/\"*.html \"/c/Users/User/Documents/BigBinary/bbt_/logo.png\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\User\\Documents\\BigBinary\\bbt_"
+    ]
+  }
+}

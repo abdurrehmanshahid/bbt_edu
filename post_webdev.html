@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@700;800;900&family=DM+Mono:wght@400;500&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  width:1080px;height:1080px;overflow:hidden;
+  background:#0d0d2e;
+  font-family:'Barlow',sans-serif;
+  color:#fff;
+  position:relative;
+}
+
+/* Binary grid bg */
+body::before{
+  content:'';position:absolute;inset:0;z-index:0;
+  background-image:
+    linear-gradient(rgba(245,166,35,.04)1px,transparent 1px),
+    linear-gradient(90deg,rgba(245,166,35,.04)1px,transparent 1px);
+  background-size:54px 54px;
+}
+
+/* Radial glows */
+body::after{
+  content:'';position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(ellipse at 85% 10%,rgba(245,166,35,.13)0%,transparent 50%),
+    radial-gradient(ellipse at 10% 85%,rgba(30,30,92,.8)0%,transparent 55%),
+    radial-gradient(ellipse at 50% 50%,rgba(26,26,80,.4)0%,transparent 70%);
+}
+
+/* Wavy orange lines */
+.wave-tl,.wave-br{position:absolute;z-index:1;opacity:.35}
+.wave-tl{top:0;left:0;width:220px}
+.wave-br{bottom:0;right:0;width:200px;transform:rotate(180deg)}
+
+.wrap{position:relative;z-index:2;width:1080px;height:1080px;padding:48px 68px;display:flex;flex-direction:column;justify-content:space-between}
+
+/* ── TOP ROW ── */
+.top{display:flex;justify-content:space-between;align-items:center}
+.logo-area{display:flex;align-items:center}
+.logo-img{height:38px;width:auto}
+.slide-num{font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);letter-spacing:.1em}
+
+/* Faded watermark */
+.watermark{
+  position:absolute;top:30px;right:56px;z-index:1;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:200px;font-weight:900;
+  color:rgba(245,166,35,.05);
+  line-height:1;letter-spacing:-.02em;
+  pointer-events:none;user-select:none
+}
+
+/* ── EYEBROW ── */
+.eyebrow{
+  display:flex;align-items:center;gap:10px;
+  font-family:'DM Mono',monospace;font-size:11px;
+  letter-spacing:.13em;text-transform:uppercase;color:#f5a623;
+  margin-bottom:14px
+}
+.eyebrow::before{content:'';display:block;width:20px;height:2px;background:#f5a623}
+
+/* ── HEADLINE ── */
+.headline{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:86px;font-weight:900;
+  text-transform:uppercase;line-height:.92;
+  letter-spacing:-.02em;margin-bottom:18px
+}
+.headline .orange{color:#f5a623;font-style:italic}
+.divider{width:60px;height:3px;background:#f5a623;margin-bottom:18px;border-radius:2px}
+
+/* ── BODY COPY ── */
+.body-copy{
+  font-size:16px;color:rgba(255,255,255,.62);
+  line-height:1.6;font-weight:300;max-width:580px;
+  margin-bottom:18px
+}
+.body-copy strong{color:#fff;font-weight:600}
+
+/* ── PILLS ── */
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.pill{
+  font-size:11px;font-weight:600;padding:5px 14px;
+  border:1px solid rgba(245,166,35,.35);
+  background:rgba(245,166,35,.08);
+  color:rgba(245,166,35,.9);border-radius:20px;
+  letter-spacing:.05em;text-transform:uppercase
+}
+
+/* ── STEPS ROW ── */
+.steps{
+  display:flex;gap:0;margin-bottom:16px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:6px;overflow:hidden;
+  background:rgba(255,255,255,.03)
+}
+.step{
+  flex:1;padding:14px 18px;
+  border-right:1px solid rgba(255,255,255,.08);
+  display:flex;align-items:center;gap:12px
+}
+.step:last-child{border-right:none}
+.step-icon{font-size:22px;flex-shrink:0}
+.step-label{font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.04em;line-height:1.2}
+.step-sub{font-size:10px;color:rgba(255,255,255,.45);margin-top:2px;font-weight:400}
+
+/* ── STATS ── */
+.stats{display:flex;gap:14px}
+.stat-card{
+  flex:1;padding:16px 16px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:6px;text-align:center
+}
+.stat-card .val{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:34px;font-weight:900;color:#f5a623;
+  line-height:1;display:block;margin-bottom:5px
+}
+.stat-card .lbl{font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+
+/* ── BOTTOM CTA ── */
+.bottom{display:flex;justify-content:space-between;align-items:flex-end}
+.cta-label{font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.cta-btn{
+  background:#f5a623;color:#0d0d2e;
+  font-family:'Barlow',sans-serif;font-size:14px;font-weight:800;
+  padding:13px 32px;border-radius:4px;letter-spacing:.06em;text-transform:uppercase;
+  display:inline-block
+}
+.contact{text-align:right}
+.contact-item{font-size:12px;color:rgba(255,255,255,.45);margin-bottom:5px;letter-spacing:.03em}
+.contact-item:last-child{margin-bottom:0}
+.contact-item span{color:rgba(255,255,255,.75);font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="watermark">01</div>
+
+<!-- Wavy corner SVG lines -->
+<svg class="wave-tl" viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M-10 40 Q 60 10 120 60 T 230 50" stroke="#f5a623" stroke-width="1.5" fill="none"/>
+  <path d="M-10 70 Q 70 30 140 80 T 240 70" stroke="#f5a623" stroke-width="1" fill="none"/>
+  <path d="M-10 100 Q 50 60 130 100 T 240 95" stroke="#f5a623" stroke-width=".6" fill="none"/>
+</svg>
+<svg class="wave-br" viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M-10 40 Q 60 10 120 60 T 230 50" stroke="#f5a623" stroke-width="1.5" fill="none"/>
+  <path d="M-10 70 Q 70 30 140 80 T 240 70" stroke="#f5a623" stroke-width="1" fill="none"/>
+  <path d="M-10 100 Q 50 60 130 100 T 240 95" stroke="#f5a623" stroke-width=".6" fill="none"/>
+</svg>
+
+<div class="wrap">
+
+  <!-- TOP -->
+  <div class="top">
+    <div class="logo-area">
+      <img class="logo-img" src="bbt_logo_white_flipped.png" alt="Big Binary Tech">
+    </div>
+    <div class="slide-num">bbt.edu.pk</div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <div class="eyebrow">Track 04 — Full Stack Development</div>
+
+    <div class="headline">
+      BUILD<br>
+      THE <span class="orange">WEB.</span><br>
+      SHIP REAL<br>
+      <span class="orange">SOFTWARE.</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="body-copy">
+      Don't just learn to code — learn to <strong>ship production software.</strong><br>
+      BBT's Full Stack Track takes you from zero to deploying<br>
+      <strong>real apps used by real clients.</strong>
+    </div>
+
+    <div class="pills">
+      <span class="pill">React &amp; Next.js</span>
+      <span class="pill">Node.js &amp; Express</span>
+      <span class="pill">PostgreSQL</span>
+      <span class="pill">OpenAI API</span>
+      <span class="pill">Docker &amp; CI/CD</span>
+      <span class="pill">16 Weeks</span>
+    </div>
+
+    <!-- STEPS -->
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon">👁️</div>
+        <div>
+          <div class="step-label">Shadow</div>
+          <div class="step-sub">Real engineers</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon">🔨</div>
+        <div>
+          <div class="step-label">Build</div>
+          <div class="step-sub">Live projects</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon">🚀</div>
+        <div>
+          <div class="step-label">Ship</div>
+          <div class="step-sub">To real clients</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon">🏢</div>
+        <div>
+          <div class="step-label">Get Hired</div>
+          <div class="step-sub">Or join BBT</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stat-card"><span class="val">16</span><span class="lbl">Week Track</span></div>
+      <div class="stat-card"><span class="val">92%</span><span class="lbl">Placement Rate</span></div>
+      <div class="stat-card"><span class="val">10K+</span><span class="lbl">Students</span></div>
+      <div class="stat-card"><span class="val">5+</span><span class="lbl">Years Active</span></div>
+    </div>
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="bottom">
+    <div class="cta-block">
+      <div class="cta-label">Start your track today</div>
+      <div class="cta-btn">ENROLL AT BBT.EDU.PK</div>
+    </div>
+    <div class="contact">
+      <div class="contact-item"><span>📞</span> 0326-0188811</div>
+      <div class="contact-item"><span>🌐</span> bbt.edu.pk</div>
+      <div class="contact-item"><span>✉️</span> info@bigbinarytech.com</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
